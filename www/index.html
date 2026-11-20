@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>First call repro</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 48px 16px;
+      }
+      dd {
+        font-size: 2em;
+        margin: 0 0 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>First plugin call after reload</h1>
+    <dl>
+      <dt>Rounds</dt>
+      <dd id="rounds">0</dd>
+      <dt>Settled</dt>
+      <dd id="settled">0</dd>
+      <dt>Not settled after 10 s</dt>
+      <dd id="notSettled">0</dd>
+    </dl>
+    <button id="restart">Start again</button>
+    <script src="capacitor.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

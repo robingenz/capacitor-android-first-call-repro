@@ -1,0 +1,18 @@
+{
+  "name": "capacitor-android-first-call-repro",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Reproduction: the first plugin call after a page reload can hang on Android",
+  "scripts": {
+    "sync": "cp node_modules/@capacitor/core/dist/capacitor.js www/ && cap sync android",
+    "apply-fix": "git apply --directory=node_modules/@capacitor/android fix.patch",
+    "revert-fix": "git apply -R --directory=node_modules/@capacitor/android fix.patch"
+  },
+  "dependencies": {
+    "@capacitor/android": "8.6.2",
+    "@capacitor/core": "8.6.2"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "8.6.2"
+  }
+}

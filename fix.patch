@@ -1,0 +1,12 @@
+--- a/capacitor/src/main/java/com/getcapacitor/MessageHandler.java
++++ b/capacitor/src/main/java/com/getcapacitor/MessageHandler.java
+@@ -26,8 +26,8 @@
+         if (WebViewFeature.isFeatureSupported(WebViewFeature.WEB_MESSAGE_LISTENER) && !bridge.getConfig().isUsingLegacyBridge()) {
+             WebViewCompat.WebMessageListener capListener = (view, message, sourceOrigin, isMainFrame, replyProxy) -> {
+                 if (isMainFrame) {
+-                    postMessage(message.getData());
+                     javaScriptReplyProxy = replyProxy;
++                    postMessage(message.getData());
+                 } else {
+                     Logger.warn("Plugin execution is allowed in Main Frame only");
+                 }
